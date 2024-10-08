@@ -1,0 +1,26 @@
+<div class="container">
+  @if (loading) {
+
+  <h4 class="text-center">Loading...</h4>
+
+  } @if (!loading) {
+  <div
+    class="card position-absolute top-50 start-50 translate-middle shadow"
+    style="width: 350px"
+  >
+    <img
+      src="{{ product?.image }}"
+      class="card-img-top"
+      alt="{{ product?.title }}"
+    />
+    <div class="card-body">
+      <h4 class="card-title">{{ product?.title }}</h4>
+      <h5>{{ product?.price | currency }}</h5>
+      <p class="card-text">
+        {{ product?.description }}
+      </p>
+      <a href="#" class="btn btn-primary">Buy</a>
+    </div>
+  </div>
+  }
+</div>
