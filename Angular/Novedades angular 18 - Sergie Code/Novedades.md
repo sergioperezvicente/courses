@@ -54,3 +54,49 @@ Las clases FormControI, FormGroup y FormArray de los formularios de Angular ahor
 
 La propiedad redirectTo en las rutas ahora puede aceptar una función que devuelve una cadena. Esto proporciona una mayor flexibilidad al redireccionar.
 
+![](images/16.png)
+
+## ANGULAR+WIZ: REPETICIÓN DE EVENTOS
+
+Si la página aún no se ha hidratado y, por lo tanto, no es interactiva, todos los eventos del usuario se perderían. 
+
+A partir de la versión 18 utilizando la distribución de eventos, se grabarán los eventos del usuario y una vez que la aplicación esté hidratada se reproducirán.
+
+Wiz es un framework web interno de Google, diseñado para aplicaciones críticas en rendimiento.  
+- Renderizado del lado del servidor (SSR): Renderiza la página en el servidor, optimizando la carga inicial al minimizar el JavaScript necesario. 
+- Carga de JavaScript mínima: Solo carga el JavaScript esencial para los componentes interactivos presentes en la página. 
+- Biblioteca inline para eventos de usuario: Una pequeña biblioteca integrada gestiona los eventos de usuario mientras se carga el JavaScript requerido. 
+
+![](images/17.png)
+
+Permite registrar eventos de usuario durante la carga de la aplicación y reproducirlos una vez que la aplicación se haya hidratado. Esto asegura que las interacciones del usuario no se pierdan, incluso si la página no es completamente interactiva al momento de la interacción inicial. 
+
+## NGOPTIMIZEDIMAGE
+
+Mejora de rendimiento en la carga de imágenes y si la conexión es lenta la directiva solicita una imagen desenfocada para ocupar el lugar mientras va cargando mejorando la experiencia de usuario.
+
+![](images/18.png)
+
+## DETECCIÓN DE CAMBIOS EN EVOLUCIÓN
+
+Angular ahora ofrece soporte experimental sin zone, eliminando las limitaciones de rendimiento y experiencia del desarrollador asociadas con la biblioteca zone.js. 
+
+![](images/19.png)
+
+## PARTIAL HYDRATION
+
+Se basa en la misma tecnología que las vistas deferidas, pero en lugar de renderizar el bloque @placeholder en el servidor, puedes habilitar un modo donde Angular renderiza el contenido principal del bloque @defer en el servidor. En el cliente, Angular descargará el JavaScript asociado y hidratará el bloque deferido solo cuando se cumplan las condiciones especificadas en una plantilla. 
+
+![](images/20.png)
+
+## DEFER ESTABLE
+
+Permite cargar estos recursos solo cuando se necesitan, lo que puede mejorar el rendimiento de la aplicación. Se puede configurar para cargar en diferentes condiciones, como cuando el navegador está en estado de reposo, cuando el elemento entra en la vista, cuando se produce una interacción con el elemento, entre otros. 
+
+![](images/21.png)
+
+## PUBLIC/ASSETS
+
+En Angular veníamos acostumbrados a poder utilizar dentro de nuestra carpeta SRC archivos estáticos pero en Angular 18, este ya no es el caso. Para poder utilizar archivos estáticos hay que utlizar la carpeta public y las URLS deben apuntar hacia adentro de esta carpeta de forma "absoluta" 
+
+![](images/22.png)
